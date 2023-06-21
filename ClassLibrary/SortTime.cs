@@ -8,7 +8,7 @@ namespace ClassLibrary
 {
     public class SortTime : IComparer<Transaction>
     {
-        // Sort Time by ascending
+        // Sort by Time
         public int Compare(Transaction x, Transaction y)
         {
             return x.TransactionTime.CompareTo(y.TransactionTime);

@@ -27,15 +27,15 @@ namespace Final
 
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void Loginbtn_Click(object sender, RoutedEventArgs e)
         {
             ValidUser();
         }
 
         public void ValidUser()
         {
-            string userName = txtUserName.Text;
-            string password = txtPassword.Text;
+            string userName = UsernameTxt.Text;
+            string password = PasswordTxt.Text;
 
 
             for (int i = 0; i < Data.accounts.Count; i++)
@@ -56,14 +56,10 @@ namespace Final
                             AdminWindow aw = new AdminWindow();
                             aw.Show();
                         }
-                        else
-                        {
-                            MessageBox.Show("No user role assigned. Please contact your admin.");
-                        }
                     }
                     else
                     {
-                        MessageBox.Show("Please enter a valid password");
+                        MessageBox.Show("Please enter a valid username or password");
                     }
                 }
             }

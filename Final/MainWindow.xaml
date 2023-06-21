@@ -9,10 +9,10 @@
     <Canvas Background="#FF616161">
         <Canvas Height="291" Width="652" Canvas.Left="74" Background="#FF636EA9" Canvas.Top="68">
             <Label Content="Username" Canvas.Left="101" Canvas.Top="90" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBox x:Name="txtUserName" Canvas.Left="203" TextWrapping="Wrap" Canvas.Top="94" Width="335" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="UsernameTxt" Canvas.Left="203" TextWrapping="Wrap" Canvas.Top="94" Width="335" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Label Content="Password" Canvas.Left="107" Canvas.Top="142" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBox x:Name="txtPassword" Canvas.Left="203" TextWrapping="Wrap" Canvas.Top="146" Width="335" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Button x:Name="btnLogin" Content="Login" Canvas.Left="258" Canvas.Top="216" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" FontWeight="Bold" RenderTransformOrigin="0.49,1.025" Click="btnLogin_Click"/>
+            <TextBox x:Name="PasswordTxt" Canvas.Left="203" TextWrapping="Wrap" Canvas.Top="146" Width="335" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="Loginbtn" Content="Login" Canvas.Left="258" Canvas.Top="216" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" FontWeight="Bold" RenderTransformOrigin="0.49,1.025" Click="Loginbtn_Click"/>
         </Canvas>
 
     </Canvas>

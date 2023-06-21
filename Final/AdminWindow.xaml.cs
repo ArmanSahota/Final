@@ -17,43 +17,48 @@ namespace Final
 {
     public partial class AdminWindow : Window
     {
+        //sets up the admin page
         public AdminWindow()
         {
             InitializeComponent();
-            DisplayCurrentUserLabel();
-            PreloadComboBox();
-            UpdateLVUser();
+            DisplayUserName();
+            LoadComboBox();
+            UpdateUser();
         }
 
-       
+       //add user button
         private void btnAddUser_Click(object sender, RoutedEventArgs e)
         {
-            string name = txtName.Text;
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            UserAccount.Role role = (UserAccount.Role)cbRoles.SelectedIndex;
-            UserAccount newUser = new UserAccount(name, username, password, role);
-            Data.AddUser(newUser);
-            lvDisplayUsers.Items.Refresh();
+            string name = NameTextBox.Text;
+            string username = UsernameTxtBox.Text;
+            string password = PasswordTxtBox.Text;
+            if (NameTextBox.Text != null && NameTextBox.Text != null && PasswordTxtBox.Text != null)
+            {
+                UserAccount.Role role = (UserAccount.Role)RolesCB.SelectedIndex;
+                UserAccount newUser = new UserAccount(name, username, password, role);
+                Data.AddUser(newUser);
+                DisplayListView.Items.Refresh();
+            }
         }
 
-        
-        void PreloadComboBox()
+        //load the role combo box
+        void LoadComboBox()
         {
-            cbRoles.Items.Add("User");
-            cbRoles.Items.Add("Admin");
-            cbRoles.SelectedIndex = 0;
+            RolesCB.Items.Add("User");
+            RolesCB.Items.Add("Admin");
+            RolesCB.SelectedIndex = 0;
         }
 
-       
-        void UpdateLVUser()
+       //update the users displayed on the displaylistview
+        void UpdateUser()
         {
-            lvDisplayUsers.ItemsSource = Data.accounts;
+            DisplayListView.ItemsSource = Data.accounts;
 
         }
-        void DisplayCurrentUserLabel()
+        //display the admin logged in's name
+        void DisplayUserName()
         {
-            lblCurrentUser.Content = $"Current User: {Data.currentUser.Name}";
+            CurrentUserTxt.Content = $"Current User: {Data.currentUser.Name}";
         }
     }
 }

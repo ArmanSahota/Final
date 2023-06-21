@@ -48,39 +48,39 @@ namespace Final
         {
             lvUserTransactions.ItemsSource = transactions;
         }
-        private void btnSortName_Click(object sender, RoutedEventArgs e)
+        private void SortNameBtn_Click(object sender, RoutedEventArgs e)
         {
             transactions.Sort();
             UpdateListView();
         }
 
-        private void btnSortTime_Click(object sender, RoutedEventArgs e)
+        private void SortTimeBtn_Click(object sender, RoutedEventArgs e)
         {
             SortTime tst = new SortTime();
             transactions.Sort(tst);
             UpdateListView();
         }
 
-        private void btnSortPrice_Click(object sender, RoutedEventArgs e)
+        private void SortPriceBtn_Click(object sender, RoutedEventArgs e)
         {
             SortPrice tsp = new SortPrice();
             transactions.Sort(tsp);
             UpdateListView();
         }
 
-        private void btnAddItem_Click(object sender, RoutedEventArgs e)
+        private void AddItemBtn_Click(object sender, RoutedEventArgs e)
         {
-            string itemName = txtItemName.Text;
-            string userItemPrice = txtItemPrice.Text;
+            string itemName = ItemNameTxt.Text;
+            string userItemPrice = ItemPriceTxt.Text;
             
             Decimal.TryParse(userItemPrice, out decimal itemPrice);
             transactions.Add(new Transaction(itemName, itemPrice));
             UpdateListView();
         }
 
-        private void btnSaveNewCSV_Click(object sender, RoutedEventArgs e)
+        private void SaveCSVBtn_Click(object sender, RoutedEventArgs e)
         {
-            string filePath = txtNewFileName.Text + ".csv";
+            string filePath = NewFileTxt.Text + ".csv";
             WriteTransactions(filePath);
         }
 
@@ -116,9 +116,20 @@ namespace Final
         
         // Saves user list to CSV and closes window
 
-        private void btnSaveTransactions_Click(object sender, RoutedEventArgs e)
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
             WriteTransactions(Data.UsersTransactions());
+        }
+
+        private async void LogoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Did you save and are you sure you want to logout?", "Confirmation", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+
         }
     }
 }

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AdminWindow" Height="450" Width="800">
     <Canvas Background="#FF404040">
-        <ListView x:Name="lvDisplayUsers" Height="355" Width="413" ItemsSource="{Binding Path=Data.accounts}" Canvas.Left="377" Canvas.Top="47" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FF636EA9">
+        <ListView x:Name="DisplayListView" Height="392" Width="413" ItemsSource="{Binding Path=Data.accounts}" Canvas.Left="377" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FF636EA9">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="100" Header="Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
@@ -18,19 +18,19 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Canvas Height="355" Width="328" Background="#FF636EA9" Canvas.Left="23" Canvas.Top="47" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Label Content="Name" Canvas.Left="43" Canvas.Top="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtName" Canvas.Left="106" TextWrapping="Wrap" Text="" Canvas.Top="84" Width="212" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
-            <Label Content="Add New User" Canvas.Left="85" Canvas.Top="19" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.732,0.491" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Username" Canvas.Top="127" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="7"/>
-            <TextBox x:Name="txtUsername" Canvas.Left="106" TextWrapping="Wrap" Text="" Canvas.Top="131" Width="212" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Password" Canvas.Left="13" Canvas.Top="174" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtPassword" Canvas.Left="106" TextWrapping="Wrap" Text="" Canvas.Top="178" Width="212" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Role" Canvas.Left="57" Canvas.Top="225" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <ComboBox x:Name="cbRoles" Canvas.Left="106" Canvas.Top="228" Width="212" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Button x:Name="btnAddUser" Content="Add User" Canvas.Left="137" Canvas.Top="283" HorizontalAlignment="Center" VerticalAlignment="Top" Width="106" Height="34" FontSize="20" Click="btnAddUser_Click"/>
+        <Canvas Height="394" Width="328" Background="#FF636EA9" Canvas.Left="23" Canvas.Top="8" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Label Content="Name" Canvas.Left="19" Canvas.Top="135" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="NameTextBox" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="135" Width="212" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"/>
+            <Label Content="Add New User" Canvas.Left="80" Canvas.Top="77" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.732,0.491" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}"/>
+            <Label Content="Username" Canvas.Top="178" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="6"/>
+            <TextBox x:Name="UsernameTxtBox" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="182" Width="212" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Password" Canvas.Left="10" Canvas.Top="225" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="PasswordTxtBox" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="233" Width="212" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Role" Canvas.Left="26" Canvas.Top="272" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <ComboBox x:Name="RolesCB" Canvas.Left="106" Canvas.Top="283" Width="212" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnAddUser" Content="Add User" Canvas.Left="106" Canvas.Top="341" HorizontalAlignment="Left" VerticalAlignment="Top" Width="106" Height="34" FontSize="20" Click="btnAddUser_Click"/>
         </Canvas>
-        <Label x:Name="lblCurrentUser" Content="" Canvas.Left="23" Canvas.Top="9" FontSize="20" Foreground="White"/>
+        <Label x:Name="CurrentUserTxt" Content="" Canvas.Left="38" Canvas.Top="20" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Width="240" BorderBrush="Black" RenderTransformOrigin="0.721,1.395"/>
 
     </Canvas>
 </Window>

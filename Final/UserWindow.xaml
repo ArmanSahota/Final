@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Final"
         mc:Ignorable="d"
         Title="UserWindow" Height="450" Width="800">
-    <Canvas Background="#FF4C4C4C">
+    <Canvas Background="#FF4C4C4C" Margin="0,0,0,-16">
         <Label x:Name="lblCurrentUser" Content="" Canvas.Left="10" Canvas.Top="4" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.485,-0.442" Width="248" FontSize="20"/>
         <ListView x:Name="lvUserTransactions" Height="322" Width="464" ItemsSource="{Binding Path=transactions}" Canvas.Left="15" Canvas.Top="90" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FF636EA9">
             <ListView.View>
@@ -21,25 +21,26 @@
         </ListView>
         <Canvas Height="33" Width="464" Canvas.Left="15" Canvas.Top="46" Background="#FF636EA9" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Label Content="Sort By:" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
-            <Button x:Name="btnSortName" Content="Name" Canvas.Left="88" Canvas.Top="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="95" Click="btnSortName_Click"/>
-            <Button x:Name="btnSortTime" Content="Transaction Time" Canvas.Left="199" Canvas.Top="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="138" Click="btnSortTime_Click"/>
-            <Button x:Name="btnSortPrice" Content="Amount" Canvas.Left="352" Canvas.Top="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="102" Click="btnSortPrice_Click"/>
+            <Button x:Name="SortNameBtn" Content="Name" Canvas.Left="88" Canvas.Top="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="95" Click="SortNameBtn_Click"/>
+            <Button x:Name="SortTimeBtn" Content="Transaction Time" Canvas.Left="199" Canvas.Top="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="138" Click="SortTimeBtn_Click"/>
+            <Button x:Name="SortPriceBtn" Content="Price" Canvas.Left="352" Canvas.Top="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="102" Click="SortPriceBtn_Click"/>
         </Canvas>
-        <Canvas Height="187" Width="286" Background="#FF636EA9" Canvas.Left="495" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Canvas Height="187" Width="286" Background="#FF636EA9" Canvas.Left="495" Canvas.Top="14" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Label Content="Item Name:" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Width="127" Canvas.Left="7"/>
-            <TextBox x:Name="txtItemName" Canvas.Left="7" TextWrapping="Wrap" Canvas.Top="37" Width="269" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="ItemNameTxt" Canvas.Left="7" TextWrapping="Wrap" Canvas.Top="37" Width="269" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Label Content="Price:" FontSize="20" Width="127" Canvas.Left="7" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="73"/>
-            <TextBox x:Name="txtItemPrice" Canvas.Left="7" TextWrapping="Wrap" Canvas.Top="110" Width="269" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Button x:Name="btnAddItem" Content="Add Item" Canvas.Left="74" Canvas.Top="150" HorizontalAlignment="Left" VerticalAlignment="Center" Width="136" FontSize="20" Click="btnAddItem_Click"/>
+            <TextBox x:Name="ItemPriceTxt" Canvas.Left="7" TextWrapping="Wrap" Canvas.Top="110" Width="269" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="AddItemBtn" Content="Add Item" Canvas.Left="74" Canvas.Top="150" HorizontalAlignment="Left" VerticalAlignment="Center" Width="136" FontSize="20" Click="AddItemBtn_Click"/>
         </Canvas>
         <Canvas Height="198" Width="286" Background="#FF636EA9" Canvas.Left="495" Canvas.Top="214" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Label Content="Save List as New CSV File" Canvas.Left="10" Canvas.Top="10" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Label Content="File Name:" Canvas.Left="10" Canvas.Top="58" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Width="179"/>
             <Label Content=".csv" Canvas.Left="231" Canvas.Top="91" FontSize="20" Width="45" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.67,0.523"/>
-            <TextBox x:Name="txtNewFileName" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="95" Width="221" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
-            <Button x:Name="btnSaveNewCSV" Content="Save" Canvas.Left="78" Canvas.Top="139" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" FontSize="20" Click="btnSaveNewCSV_Click"/>
+            <TextBox x:Name="NewFileTxt" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="95" Width="221" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
+            <Button x:Name="SaveCSVBtn" Content="Save" Canvas.Left="78" Canvas.Top="139" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" FontSize="20" Click="SaveCSVBtn_Click"/>
         </Canvas>
-        <Button x:Name="btnSaveTransactions" Content="Save Transactions" Canvas.Left="306" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="173" Click="btnSaveTransactions_Click"/>
+        <Button x:Name="SaveBtn" Content="Save Transactions" Canvas.Left="306" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="173" Click="SaveBtn_Click"/>
+        <Button x:Name="LogoutBtn" Content="Logout" Canvas.Left="589" Canvas.Top="-11" HorizontalAlignment="Left" VerticalAlignment="Center" Width="144" Height="20" Click="LogoutBtn_Click"/>
 
     </Canvas>
 </Window>
