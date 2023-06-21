@@ -46,7 +46,7 @@ namespace Final
         }
         void DisplayUserTransactions()
         {
-            lvUserTransactions.ItemsSource = transactions;
+            UserTransactionsLV.ItemsSource = transactions;
         }
         private void SortNameBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -87,7 +87,7 @@ namespace Final
         // Updates the listview
         public void UpdateListView()
         {
-            lvUserTransactions.Items.Refresh();
+            UserTransactionsLV.Items.Refresh();
         }
         // When called saves transaction list to the users csv
         public void WriteTransactions(string filePath)

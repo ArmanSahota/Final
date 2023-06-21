@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Final"
         mc:Ignorable="d"
         Title="AdminWindow" Height="450" Width="800">
-    <Canvas Background="#FF404040">
+    <Canvas Background="#FF2B2A4C">
         <ListView x:Name="DisplayListView" Height="392" Width="413" ItemsSource="{Binding Path=Data.accounts}" Canvas.Left="377" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FF636EA9">
             <ListView.View>
                 <GridView>

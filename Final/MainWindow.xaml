@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Final"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas Background="#FF616161">
+    <Canvas Background="#FF2B2A4C">
         <Canvas Height="291" Width="652" Canvas.Left="74" Background="#FF636EA9" Canvas.Top="68">
             <Label Content="Username" Canvas.Left="101" Canvas.Top="90" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <TextBox x:Name="UsernameTxt" Canvas.Left="203" TextWrapping="Wrap" Canvas.Top="94" Width="335" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
