@@ -37,10 +37,10 @@
             <Label Content="File Name:" Canvas.Left="10" Canvas.Top="58" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Width="179"/>
             <Label Content=".csv" Canvas.Left="231" Canvas.Top="91" FontSize="20" Width="45" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.67,0.523"/>
             <TextBox x:Name="NewFileTxt" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="95" Width="221" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
-            <Button x:Name="SaveCSVBtn" Content="Save" Canvas.Left="78" Canvas.Top="139" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" FontSize="20" Click="SaveCSVBtn_Click"/>
+            <Button x:Name="SaveCSVBtn" Content="Save" Canvas.Left="10" Canvas.Top="143" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" FontSize="20" Click="SaveCSVBtn_Click"/>
         </Canvas>
         <Button x:Name="SaveBtn" Content="Save Transactions" Canvas.Left="306" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="173" Click="SaveBtn_Click"/>
-        <Button x:Name="LogoutBtn" Content="Logout" Canvas.Left="589" Canvas.Top="-11" HorizontalAlignment="Left" VerticalAlignment="Center" Width="144" Height="20" Click="LogoutBtn_Click"/>
+        <Button x:Name="LogoutBtn" Content="Logout" Canvas.Left="658" Canvas.Top="357" HorizontalAlignment="Center" VerticalAlignment="Top" Width="123" Height="30" Click="LogoutBtn_Click"/>
 
     </Canvas>
 </Window>

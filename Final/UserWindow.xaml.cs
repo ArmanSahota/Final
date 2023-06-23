@@ -48,26 +48,27 @@ namespace Final
         {
             UserTransactionsLV.ItemsSource = transactions;
         }
+        //sort by name
         private void SortNameBtn_Click(object sender, RoutedEventArgs e)
         {
             transactions.Sort();
             UpdateListView();
         }
-
+        // sort by time
         private void SortTimeBtn_Click(object sender, RoutedEventArgs e)
         {
             SortTime tst = new SortTime();
             transactions.Sort(tst);
             UpdateListView();
         }
-
+        // sort by price
         private void SortPriceBtn_Click(object sender, RoutedEventArgs e)
         {
             SortPrice tsp = new SortPrice();
             transactions.Sort(tsp);
             UpdateListView();
         }
-
+        //add item
         private void AddItemBtn_Click(object sender, RoutedEventArgs e)
         {
             string itemName = ItemNameTxt.Text;
@@ -89,7 +90,7 @@ namespace Final
         {
             UserTransactionsLV.Items.Refresh();
         }
-        // When called saves transaction list to the users csv
+        //saves transaction to the users csv
         public void WriteTransactions(string filePath)
         {
             CultureInfo ci = CultureInfo.InvariantCulture;
@@ -98,7 +99,6 @@ namespace Final
             using (var writer = new StreamWriter(stream))
             using (var csvWriter = new CsvWriter(writer, ci))
             {
-                // .WriteRecords(list);
                 csvWriter.WriteRecords(transactions);
                 writer.Flush();
             }
@@ -120,7 +120,7 @@ namespace Final
         {
             WriteTransactions(Data.UsersTransactions());
         }
-
+        // Asks if you want to log out and logs you out
         private async void LogoutBtn_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Did you save and are you sure you want to logout?", "Confirmation", MessageBoxButton.YesNo);

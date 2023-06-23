@@ -21,20 +21,19 @@ namespace Final
         public static string userInformation = "users.json";
         static string TransactionExtension = "_transaction.csv";
 
-        // Use a static constructor to load the accounts list ( make sure a file exists before you try to load )
+        
         static Data()
         {
             ReadUsers();
         }
 
-        // Special Method with provided code ( helps save a file with the users name and transaction )
-        // This creates a unique file automatically based on the user account that's logged in
+        
         public static string UsersTransactions()
         {
             return currentUser.Name + TransactionExtension;
         }
 
-        // Used to load accounts list the first time, then save to .json
+        //load and save the .json file with usernames and passwords
         public static void Preload()
         {
             accounts.Add(new UserAccount("Jack", "jack", "Pot", 0));
@@ -52,7 +51,7 @@ namespace Final
             SaveUsers();
         }
 
-        // Save accounts json
+        // Save accounts
         public static void SaveUsers()
         {
             JsonSerializerOptions jso = new JsonSerializerOptions()
@@ -66,7 +65,7 @@ namespace Final
         }
 
 
-        // Read json and deserialize to accounts
+        // Read the files
         public static void ReadUsers()
         {
             if (File.Exists(userInformation))

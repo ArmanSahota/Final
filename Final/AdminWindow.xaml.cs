@@ -49,7 +49,7 @@ namespace Final
             RolesCB.SelectedIndex = 0;
         }
 
-       //update the users displayed on the displaylistview
+       //update the users displayed on the displaylistview list view
         void UpdateUser()
         {
             DisplayListView.ItemsSource = Data.accounts;

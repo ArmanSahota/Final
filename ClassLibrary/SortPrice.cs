@@ -8,7 +8,7 @@ namespace ClassLibrary
 {
     public class SortPrice : IComparer<Transaction>
     {
-        // Sort price by ascending
+        // Sort by price
         public int Compare(Transaction x, Transaction y)
         {
              return x.Price.CompareTo(y.Price);

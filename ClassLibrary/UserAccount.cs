@@ -51,7 +51,7 @@ namespace ClassLibrary
             }
         }
 
-        // checks username and password
+        // checks usernames and passwords
         public bool ValidUser(string userName, string password)
         {
             if(_userName == userName && _password == password)

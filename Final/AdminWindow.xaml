@@ -21,7 +21,7 @@
         <Canvas Height="394" Width="328" Background="#FF636EA9" Canvas.Left="23" Canvas.Top="8" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Label Content="Name" Canvas.Left="19" Canvas.Top="135" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <TextBox x:Name="NameTextBox" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="135" Width="212" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"/>
-            <Label Content="Add New User" Canvas.Left="80" Canvas.Top="77" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.732,0.491" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}"/>
+            <Label Content="Add New User" Canvas.Left="80" Canvas.Top="72" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.732,0.491" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}"/>
             <Label Content="Username" Canvas.Top="178" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="6"/>
             <TextBox x:Name="UsernameTxtBox" Canvas.Left="105" TextWrapping="Wrap" Text="" Canvas.Top="182" Width="212" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Label Content="Password" Canvas.Left="10" Canvas.Top="225" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"/>

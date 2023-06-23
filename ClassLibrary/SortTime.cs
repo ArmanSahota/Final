@@ -8,6 +8,7 @@ namespace ClassLibrary
 {
     public class SortTime : IComparer<Transaction>
     {
+
         // Sort by Time
         public int Compare(Transaction x, Transaction y)
         {

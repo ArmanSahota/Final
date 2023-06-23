@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-
     public class Transaction : IComparable<Transaction>
     {
         DateTime _transactionTime;
@@ -24,7 +23,7 @@ namespace ClassLibrary
         {
 
         }
-        // a transaction needs the name of the item and price of the item.
+        // a transaction needs the name of the item and price of the item
         public Transaction(string name, decimal price)
         {
             _transactionTime = DateTime.Now;
@@ -33,7 +32,7 @@ namespace ClassLibrary
             _tax = (decimal).108;
             _total = price + price*_tax;
         }
-
+        
         public int CompareTo(Transaction other)
         {
             return _name.CompareTo(other._name);

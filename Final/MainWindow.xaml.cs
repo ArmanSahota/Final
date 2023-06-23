@@ -31,11 +31,11 @@ namespace Final
         {
             ValidUser();
         }
-
+        // login and password with the validation
         public void ValidUser()
         {
             string userName = UsernameTxt.Text;
-            string password = PasswordTxt.Text;
+            string password = PasswordTxt.Password;
 
 
             for (int i = 0; i < Data.accounts.Count; i++)
@@ -65,5 +65,6 @@ namespace Final
             }
         }
 
+       
     }
 }
